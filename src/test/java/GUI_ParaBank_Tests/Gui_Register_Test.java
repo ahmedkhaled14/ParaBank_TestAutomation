@@ -17,10 +17,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Gui_Register_Test {
-    private WebDriver driver;
     private final JSONFileManager LoginTestData = new JSONFileManager(System.getProperty("LoginTestDataPath"));
     private final JSONFileManager RegisterTestData = new JSONFileManager(System.getProperty("RegisterTestDataPath"));
-
+    private WebDriver driver;
 
     @BeforeMethod
     public void beforeMethod() {

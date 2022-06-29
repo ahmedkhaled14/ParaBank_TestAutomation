@@ -18,8 +18,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Gui_Account_Test {
-    private WebDriver driver;
     private final JSONFileManager LoginTestData = new JSONFileManager(System.getProperty("LoginTestDataPath"));
+    private WebDriver driver;
 
     @BeforeMethod
     public void beforeMethod() {
@@ -30,10 +30,10 @@ public class Gui_Account_Test {
     @Severity(SeverityLevel.CRITICAL)
     @Story("Open New Account")
     @Test(description = "Open New Account")
-    public void OpenNewAccount(){
+    public void OpenNewAccount() {
         new ParaBank_SignIn_page(driver)
                 .navigateToURl()
-                .Valid_login(LoginTestData.getTestData("UserName"),LoginTestData.getTestData("Password"))
+                .Valid_login(LoginTestData.getTestData("UserName"), LoginTestData.getTestData("Password"))
                 .ClickOnOpenNewAccount();
 
         Validations.assertThat()
@@ -84,7 +84,7 @@ public class Gui_Account_Test {
 
     }
 
-        @AfterMethod
+    @AfterMethod
     public void afterMethod() {
         BrowserActions.closeCurrentWindow(driver);
     }
