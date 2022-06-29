@@ -15,6 +15,7 @@ public class ParaBank_Home_Page {
     public static By Welcome_afterRegister(){
         return By.xpath("//h1[@class='title']");
     }
+    private By logOut(){return By.linkText("Log Out");}
     private By OpenNewAccount(){
         return By.xpath("//a[contains(.,'Open New Account')]");
     }
@@ -25,5 +26,10 @@ public class ParaBank_Home_Page {
     public OpenNewAccount_Page ClickOnOpenNewAccount(){
         ElementActions.click(driver,OpenNewAccount());
         return new OpenNewAccount_Page(driver);
+    }
+
+    public ParaBank_SignIn_page ClickOnLogOut(){
+        ElementActions.click(driver,logOut());
+        return new ParaBank_SignIn_page(driver);
     }
 }

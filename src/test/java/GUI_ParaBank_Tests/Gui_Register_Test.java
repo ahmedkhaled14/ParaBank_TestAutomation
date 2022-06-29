@@ -12,7 +12,6 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
-import org.springframework.context.annotation.DependsOn;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -56,6 +55,8 @@ public class Gui_Register_Test {
                 .contains("Welcome")
                 .withCustomReportMessage("Verify that user is able to Register successfully in the ParaBank application after providing the valid Register Test Data. ")
                 .perform();
+        new ParaBank_Home_Page(driver)
+                .ClickOnLogOut();
     }
 
     @Description("Given the browser is open, When i navigate to ParaBank URl ,And type the valid username and password, Then navigate to my account page")
