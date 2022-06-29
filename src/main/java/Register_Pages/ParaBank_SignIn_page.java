@@ -15,10 +15,7 @@ public class ParaBank_SignIn_page {
     private By Password(){
         return By.name("password");
     }
-    private By login(){
-        return By.xpath("//input[@type='submit']");
-    }
-
+    private By login(){return By.xpath("//input[@type='submit']");}
     private By Register_Button(){
         return By.linkText("Register");
     }
@@ -36,6 +33,11 @@ public class ParaBank_SignIn_page {
         ElementActions.type(driver,Password(),Password);
         ElementActions.click(driver,login());
         return new ParaBank_Home_Page(driver);
+    }
+
+    public ParaBank_Register_Page ClickOnRegisterLink(){
+       ElementActions.click(driver,Register_Button());
+        return new ParaBank_Register_Page(driver);
     }
 
 

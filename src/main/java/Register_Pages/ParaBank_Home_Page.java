@@ -9,8 +9,11 @@ import org.openqa.selenium.WebDriver;
 public class ParaBank_Home_Page {
     WebDriver driver ;
 
-    public static By Welcome (){
-        return By.xpath("//p[contains(.,' Ahmed khaled')]");
+    public static By Welcome_afterLogin (){
+        return By.xpath("//h1[contains(.,'Accounts Overview')]");
+    }
+    public static By Welcome_afterRegister(){
+        return By.xpath("//h1[@class='title']");
     }
     private By OpenNewAccount(){
         return By.xpath("//a[contains(.,'Open New Account')]");
