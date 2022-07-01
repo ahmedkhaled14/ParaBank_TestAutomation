@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/programming/Testing/ParaBank_TestAutomation">
+        <classes>
+            <class name="GUI_Account_Tests.Gui_Account_Test">
+                <methods>
+                    <include name="OpenNewAccount"/>
+                    <include name="OpenNewAccountButton"/>
+                    <include name="AccountOverView"/>
+                </methods>
+            </class>
+            <class name="GUI_ParaBank_Tests.Gui_Register_Test">
+                <methods>
+                    <include name="Register"/>
+                    <include name="UserLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
